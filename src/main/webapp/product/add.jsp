@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
 <head>
@@ -7,8 +7,8 @@
 </head>
 <body>
 <h1>Add new product</h1>
-<c:if test="${requestScope['message']=='addSuccess'}"><span style="color: green">Product has been added successfully</span><br></c:if>
-<c:if test="${requestScope['message']=='addFail'}"><span style="color: red">Product has NOT been added</span><br></c:if>
+<c:if test="${requestScope['message']=='addSuccess'}"><span style="color: green">Product added Success!</span><br></c:if>
+<c:if test="${requestScope['message']=='addFail'}"><span style="color: red">Product has not been added!</span><br></c:if>
 <form action="/products?action=add" method="post">
     <lable>Name</lable><br>
     <input type="text" name="name"><br>
@@ -21,8 +21,12 @@
     <lable>Description</lable><br>
     <input type="text" name="description"><br>
     <lable>Category</lable><br>
-    <input type="text" name="categoryId" required><br>
-    <input type="submit" value="Add" class="btn btn-primary">|<a href="/products" class="btn btn-primary">Back</a><br>
+    <select name="categoryId">
+        <c:forEach items="${requestScope['categories']}" var="category">
+            <option value="${category.id}">${category.name}</option>
+        </c:forEach>
+    </select><br><br>
+    <input type="submit" value="Create" class="btn btn-success">|<a href="/products" class="btn btn-secondary">Back</a><br>
 </form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
