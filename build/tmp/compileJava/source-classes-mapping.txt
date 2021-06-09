@@ -1,14 +1,20 @@
-service/IGeneralService.java
- service.IGeneralService
-service/category/CategoryService.java
- service.category.CategoryService
-controller/ProductServlet.java
- controller.ProductServlet
-model/Product.java
- model.Product
-service/product/ProductService.java
- service.product.ProductService
-service/product/IProductService.java
- service.product.IProductService
-service/category/ICategoryService.java
- service.category.ICategoryService
+com/codegym/dao/SQLConnection.java
+ com.codegym.dao.SQLConnection
+com/codegym/model/Category.java
+ com.codegym.model.Category
+com/codegym/model/Product.java
+ com.codegym.model.Product
+com/codegym/dao/IGeneralDAO.java
+ com.codegym.dao.IGeneralDAO
+com/codegym/service/IGeneralService.java
+ com.codegym.service.IGeneralService
+com/codegym/controller/ProductServlet.java
+ com.codegym.controller.ProductServlet
+com/codegym/dao/productDAO/IProductDAO.java
+ com.codegym.dao.productDAO.IProductDAO
+com/codegym/service/product/IProductService.java
+ com.codegym.service.product.IProductService
+com/codegym/dao/productDAO/ProductDAO.java
+ com.codegym.dao.productDAO.ProductDAO
+com/codegym/service/product/ProductService.java
+ com.codegym.service.product.ProductService
